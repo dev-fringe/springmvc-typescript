@@ -20,7 +20,7 @@ public class HomeController {
 	@RequestMapping("/test")
 	@ResponseBody
 	public Object test() {
-		Map map = new HashMap<>();
+		Map<String, Object> map = new HashMap<>();
 		map.put("sds", "sdsd");
 		return map;
 	}
