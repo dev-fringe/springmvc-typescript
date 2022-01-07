@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+		<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Spring5 MVC Hibernate Demo</title>
+	</head>
+	<body>
+		<h1>Input Form</h1>
+		<form action="addUser" method="post" name="user">
+			<table>
+				<tr>
+					<td>Name</td>
+					<td>
+						<input  type="text" name="name" value="{{name}}" /> <br />
+<!-- 						<form:errors path="name" cssClass="error" /> -->
+					</td>
+				</tr>
+				<tr>
+					<td>Email</td>
+					<td>
+						<input  type="text" name="email" value="{{email}}" /> <br />
+<!-- 						<form:errors path="email" cssClass="error" /> -->
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2"><button type="submit">Submit</button></td>
+				</tr>
+			</table>
+		</form>
+		
+		<h2>Users List</h2>
+		<table>
+			<tr>
+				<td><strong>Name</strong></td>
+				<td><strong>Email</strong></td>
+			</tr>
+			 {{#users}}
+				<tr>
+					<td>{{name}}</td>
+					<td>{{email}}</td>
+				</tr>
+			 {{/users}}
+		</table>
+	</body>
+</html>
